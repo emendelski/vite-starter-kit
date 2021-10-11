@@ -1,8 +1,7 @@
 import {defineConfig} from 'vite';
 import path from 'path';
-import envCompatible from 'vite-plugin-env-compatible';
-import {injectHtml} from 'vite-plugin-html';
-import {viteCommonjs} from '@originjs/vite-plugin-commonjs';
+// import viteStylelint from '@amatlash/vite-plugin-stylelint';
+import stylelintPlugin from '@frsource/vite-plugin-stylelint';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,7 +15,7 @@ export default defineConfig({
     ],
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
   },
-  plugins: [viteCommonjs(), envCompatible(), injectHtml()],
+  plugins: [stylelintPlugin()],
   build: {
     rollupOptions: {},
   },
