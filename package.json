@@ -1,0 +1,196 @@
+{
+  "name": "vite-starter-kit",
+  "version": "1.0.0",
+  "description": "Starter Kit for every-day frontend work",
+  "author": "Kamil Mendelski <kontakt@frontlabs.pl>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emendelski/vite-starter-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emendelski/vite-starter-kit/issues"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js src",
+    "dev": "vite",
+    "postinstall": "touch ./node_modules/.metadata_never_index",
+    "build":"vite build",
+    "deploy": "npm run build && node deploy",
+    "format:html": "prettier --write '**/*.html'",
+    "format:js": "prettier --write '**/*.js'",
+    "format:scss": "prettier --write '**/*.scss'",
+    "format": "npm run format:html && npm run format:scss && npm run format:js"
+  },
+  "private": true,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 7.0.0"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/register": "^7.15.3",
+    "@originjs/vite-plugin-commonjs": "^1.0.0-beta3",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.2.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-webpack-plugin": "^3.0.1",
+    "file-loader": "^6.2.0",
+    "ftp-deploy": "^2.4.1",
+    "image-webpack-loader": "^7.0.1",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.0",
+    "sass": "^1.39.2",
+    "sass-loader": "^12.1.0",
+    "speed-measure-webpack-plugin": "^1.5.0",
+    "style-loader": "^3.2.1",
+    "stylelint": "^13.13.1",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.20.1",
+    "stylelint-webpack-plugin": "^3.0.1",
+    "url-loader": "^4.1.1",
+    "vite": "^2.5.1",
+    "vite-plugin-env-compatible": "^1.0.0",
+    "vite-plugin-html": "2.0.7",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.3.6"
+  },
+  "browserslist": [
+    "defaults",
+    "> 0.5%",
+    "last 2 major versions",
+    "not dead"
+  ],
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": 3,
+          "modules": false
+        }
+      ]
+    ]
+  },
+  "prettier": {
+    "$schema": "http://json.schemastore.org/prettierrc",
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "printWidth": 100,
+    "proseWrap": "always",
+    "quoteProps": "as-needed",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "eslintConfig": {
+    "parser": "@babel/eslint-parser",
+    "extends": "airbnb-base",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "modules": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jquery": true
+    },
+    "rules": {
+      "arrow-parens": "off",
+      "object-curly-spacing": "off",
+      "comma-dangle": "off",
+      "object-curly-newline": "off",
+      "implicit-arrow-linebreak": "off",
+      "function-paren-newline": "off"
+    }
+  },
+  "eslintIgnore": [
+    "./dist/*",
+    "./node_modules/*"
+  ],
+  "stylelint": {
+    "ignoreFiles": [
+      "./dist/**/*",
+      "./node_modules/**/*"
+    ],
+    "plugins": [
+      "stylelint-scss",
+      "stylelint-order"
+    ],
+    "rules": {
+      "selector-max-id": 0,
+      "selector-list-comma-newline-after": "always",
+      "comment-empty-line-before": [
+        "always",
+        {
+          "except": [
+            "first-nested"
+          ]
+        }
+      ],
+      "block-opening-brace-space-before": "always",
+      "declaration-colon-space-after": "always",
+      "declaration-colon-space-before": "never",
+      "declaration-block-single-line-max-declarations": 1,
+      "declaration-property-value-disallowed-list": {
+        "/^border/": [
+          "none"
+        ]
+      },
+      "max-nesting-depth": [
+        3,
+        {
+          "ignore": [
+            "blockless-at-rules"
+          ],
+          "ignoreAtRules": [
+            "include",
+            "media"
+          ]
+        }
+      ],
+      "scss/dollar-variable-pattern": "^_?[a-z]+[\\w-]*$",
+      "scss/at-extend-no-missing-placeholder": true,
+      "order/order": [
+        "declarations",
+        {
+          "type": "at-rule"
+        },
+        {
+          "type": "at-rule",
+          "hasBlock": true
+        },
+        "rules"
+      ],
+      "number-leading-zero": null,
+      "string-quotes": null,
+      "rule-empty-line-before": null,
+      "at-rule-empty-line-before": null,
+      "indentation": null
+    }
+  }
+}
