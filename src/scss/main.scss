@@ -1,6 +1,7 @@
-@import 'normalize-scss';
-@include normalize();
-@import url(_fonts.scss);
+@import "bootstrap/scss/bootstrap";
+// @import 'normalize-scss';
+// @include normalize();
+@import '_fonts.scss';
 
 *,
 *::after,
