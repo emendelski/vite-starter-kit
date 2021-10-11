@@ -3,7 +3,10 @@ const postcssPresetEnv = require('postcss-preset-env');
 const postCssPurge = require('@fullhuman/postcss-purgecss');
 
 module.exports = {
-  plugins: [postcssPresetEnv(), postCssPurge({
-    content: ['./**/*.html']
-  })],
+  plugins: [
+    postcssPresetEnv(),
+    postCssPurge({
+      content: ['./**/*.html'],
+    }),
+  ],
 };
