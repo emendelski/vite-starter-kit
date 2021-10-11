@@ -2,7 +2,7 @@ import {defineConfig} from 'vite';
 import path from 'path';
 // import viteStylelint from '@amatlash/vite-plugin-stylelint';
 import stylelintPlugin from '@frsource/vite-plugin-stylelint';
-
+import eslintPlugin from 'vite-plugin-eslint';
 // https://vitejs.dev/config/
 export default defineConfig({
   publicDir: 'static',
@@ -15,7 +15,7 @@ export default defineConfig({
     ],
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
   },
-  plugins: [stylelintPlugin()],
+  plugins: [stylelintPlugin(), eslintPlugin()],
   build: {
     rollupOptions: {},
   },
