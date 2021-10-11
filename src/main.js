@@ -3,7 +3,7 @@ import './scss/main.scss';
 // Local components
 function component() {
   const element = document.createElement('div');
-  element.innerHTML = ['webpack', 'scss', 'babel', 'eslint', 'stylelint', 'ftp-deploy'].join(
+  element.innerHTML = ['vite', 'scss', 'babel', 'eslint', 'stylelint', 'ftp-deploy'].join(
     ' &bull; '
   );
 

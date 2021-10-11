@@ -12,14 +12,15 @@
   },
   "scripts": {
     "lint": "eslint --ext .js src",
-    "dev": "vite",
     "postinstall": "touch ./node_modules/.metadata_never_index",
-    "build":"vite build",
     "deploy": "npm run build && node deploy",
     "format:html": "prettier --write '**/*.html'",
     "format:js": "prettier --write '**/*.js'",
     "format:scss": "prettier --write '**/*.scss'",
-    "format": "npm run format:html && npm run format:scss && npm run format:js"
+    "format": "npm run format:html && npm run format:scss && npm run format:js",
+    "dev": "vite",
+    "build":"vite build",
+    "serve": "vite preview"
   },
   "private": true,
   "engines": {
