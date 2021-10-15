@@ -1,6 +1,5 @@
-@import 'bootstrap/scss/bootstrap';
-// @import 'normalize-scss';
-// @include normalize();
+@import 'normalize-scss';
+@include normalize();
 @import '_fonts.scss';
 
 *,
@@ -25,8 +24,6 @@ body {
   color: rgba(#fff, 0.9);
   width: 100%;
   min-height: 100vh;
-  background-image: url('../images/b.jpg');
-  background-size: cover;
 }
 
 .content {

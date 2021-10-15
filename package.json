@@ -28,17 +28,16 @@
     "npm": ">= 7.0.0"
   },
   "dependencies": {
-    "bootstrap": "^5.1.3",
-    "normalize-scss": "^7.0.1"
+    "@frsource/vite-plugin-stylelint": "^0.0.7",
+    "normalize-scss": "^7.0.1",
+    "vite": "^2.5.1",
+    "vite-plugin-eslint": "^1.3.0"
   },
   "devDependencies": {
-    "@amatlash/vite-plugin-stylelint": "^1.1.1",
     "@babel/core": "^7.15.5",
     "@babel/eslint-parser": "^7.15.4",
     "@babel/preset-env": "^7.15.6",
     "@babel/register": "^7.15.3",
-    "@frsource/vite-plugin-stylelint": "^0.0.7",
-    "@originjs/vite-plugin-commonjs": "^1.0.0-beta3",
     "babel-loader": "^8.2.2",
     "cross-env": "^7.0.3",
     "css-loader": "^6.2.0",
@@ -59,10 +58,7 @@
     "stylelint": "^13.13.1",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.21.0",
-    "url-loader": "^4.1.1",
-    "vite": "^2.5.1",
-    "vite-plugin-eslint": "^1.3.0",
-    "vite-plugin-html": "2.0.7"
+    "url-loader": "^4.1.1"
   },
   "peerDependencies": {
     "postcss": "^8.3.6"
@@ -125,66 +121,5 @@
   "eslintIgnore": [
     "./dist/*",
     "./node_modules/*"
-  ],
-  "stylelint": {
-    "ignoreFiles": [
-      "./dist/**/*",
-      "./node_modules/**/*"
-    ],
-    "plugins": [
-      "stylelint-scss",
-      "stylelint-order"
-    ],
-    "rules": {
-      "selector-max-id": 0,
-      "selector-list-comma-newline-after": "always",
-      "comment-empty-line-before": [
-        "always",
-        {
-          "except": [
-            "first-nested"
-          ]
-        }
-      ],
-      "block-opening-brace-space-before": "always",
-      "declaration-colon-space-after": "always",
-      "declaration-colon-space-before": "never",
-      "declaration-block-single-line-max-declarations": 1,
-      "declaration-property-value-disallowed-list": {
-        "/^border/": [
-          "none"
-        ]
-      },
-      "max-nesting-depth": [
-        3,
-        {
-          "ignore": [
-            "blockless-at-rules"
-          ],
-          "ignoreAtRules": [
-            "include",
-            "media"
-          ]
-        }
-      ],
-      "scss/dollar-variable-pattern": "^_?[a-z]+[\\w-]*$",
-      "scss/at-extend-no-missing-placeholder": true,
-      "order/order": [
-        "declarations",
-        {
-          "type": "at-rule"
-        },
-        {
-          "type": "at-rule",
-          "hasBlock": true
-        },
-        "rules"
-      ],
-      "number-leading-zero": null,
-      "string-quotes": null,
-      "rule-empty-line-before": null,
-      "at-rule-empty-line-before": null,
-      "indentation": null
-    }
-  }
+  ]
 }

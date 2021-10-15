@@ -1,9 +1,8 @@
-import {defineConfig} from 'vite';
 import path from 'path';
-// import viteStylelint from '@amatlash/vite-plugin-stylelint';
+import {defineConfig} from 'vite';
 import stylelintPlugin from '@frsource/vite-plugin-stylelint';
 import eslintPlugin from 'vite-plugin-eslint';
-// https://vitejs.dev/config/
+
 export default defineConfig({
   publicDir: 'static',
   resolve: {
