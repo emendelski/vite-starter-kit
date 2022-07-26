@@ -1,4 +1,5 @@
 module.exports = {
+  customSyntax: 'postcss-scss',
   ignoreFiles: ['./dist/**/*', './node_modules/**/*'],
   plugins: ['stylelint-scss', 'stylelint-order'],
   rules: {
