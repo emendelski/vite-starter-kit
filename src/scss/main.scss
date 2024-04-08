@@ -1,21 +1,8 @@
+@import '_reset.scss';
 @import '_fonts.scss';
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-}
-
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Noto Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-    'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: 'Noto Sans', Arial, 'Liberation Sans', sans-serif;
   background: rgb(238, 174, 202);
   background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
   padding: 3rem;
@@ -32,25 +19,20 @@ body {
   padding: 3rem;
   font-size: 1.5rem;
 
-  > img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 3rem;
-  }
-
   > strong {
     display: block;
-    font-size: 1.125em;
-    margin-bottom: 0.25em;
+    font-size: clamp(1.5rem, 1vw + 1rem, 1.875rem);
+    margin-block-end: 0.25em;
     letter-spacing: 0.1em;
-  }
-}
 
-.example {
-  display: grid;
-  align-items: flex-start;
-  transition: all 0.5s;
-  user-select: none;
-  background-image: linear-gradient(to bottom, white, black);
+    background: linear-gradient(-45deg, #224b7a 27%, #0c2036 78%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    position: relative;
+  }
+
+  > div {
+    letter-spacing: -0.01em;
+  }
 }
