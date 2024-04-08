@@ -30,8 +30,10 @@
   },
   "devDependencies": {
     "@types/eslint": "^8.56.7",
+    "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "postcss": "^8.4.38",
     "postcss-scss": "^4.0.9",
     "prettier": "^2.8.8",
     "sass": "^1.74.1",
@@ -41,6 +43,11 @@
     "vite-plugin-eslint2": "^4.4.0",
     "vite-plugin-stylelint": "^5.3.1"
   },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 major versions",
+    "not dead"
+  ],
   "prettier": {
     "$schema": "http://json.schemastore.org/prettierrc",
     "arrowParens": "avoid",
